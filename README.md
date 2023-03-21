@@ -22,4 +22,6 @@ v 2.6.6
 ```
 
 Escape html to c++
-```https://www.cescaper.com/```
+```
+https://www.cescaper.com/
+```

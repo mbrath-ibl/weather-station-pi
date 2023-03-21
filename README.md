@@ -28,6 +28,6 @@ https://www.cescaper.com/
 
 Future Extensions:
 ```
-It would be great if it was possible to upload html via browser, for this implementation of persistent storage would be necessary.
-More information coudl be found at: https://kevinboone.me/picoflash.html?i=1
+It would be great if it was possible to upload html via browser. Implementation of persistent storage would be necessary.
+More information could be found at: https://kevinboone.me/picoflash.html?i=1
 ```

@@ -3,15 +3,15 @@
 
 Board manager:
 ```
-# File>Preferences>Additional boards manager URLS
+# Add additional board managers via File>Preferences>Additional boards manager URLS
 https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
 
-Then in Boards Manager Menu
+# In Boards Manager menu
 Praspberry Pi Pico/RP2040
 3.1.0 installed
 ```
 
-Libraries:
+Additional libraries:
 ```
 DHT Sensor Lirary 
 v 1.4.4

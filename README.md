@@ -23,6 +23,8 @@ v 2.6.6
 
 Mock Get Requests
 ```
+https://app.wiremock.cloud/
+
 https://k1r55.wiremockapi.cloud/pressurearray
 https://k1r55.wiremockapi.cloud/humidityarray
 https://k1r55.wiremockapi.cloud/temperaturearray

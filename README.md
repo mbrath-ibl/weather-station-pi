@@ -21,6 +21,13 @@ Adafruit BMP280
 v 2.6.6
 ```
 
+Mock Get Requests
+```
+https://k1r55.wiremockapi.cloud/pressurearray
+https://k1r55.wiremockapi.cloud/humidityarray
+https://k1r55.wiremockapi.cloud/temperaturearray
+```
+
 Escape html to c++
 ```
 https://www.cescaper.com/

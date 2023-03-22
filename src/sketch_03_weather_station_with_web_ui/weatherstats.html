@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+	body {
+		background: #CDD;
+	}
+
+	.content {
+		max-width: 500px;
+		margin: auto;
+		background: white;
+		padding: 10px;
+	}
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script>
+	function getData(color, quantityName, path){
+	    const baseurl = "https://k1r55.wiremockapi.cloud/";
+	    //const baseurl = "";
+
+		$.ajax({
+			url: baseurl + path,
+			type: 'GET',
+			dataType: 'json',
+			cors: true ,
+			contentType:'application/json',
+			secure: true,
+			headers: {
+				'Access-Control-Allow-Origin': '*',
+			},
+			beforeSend: function (xhr) {
+			  xhr.setRequestHeader ("Authorization", "Basic " + btoa(""));
+			},
+			success: function (data){
+				console.log(JSON.stringify(data));
+				var yValues = data["values"];
+				var xValues = new Array();
+				
+				//construct X axis labels
+                var samplingPeriodSec = data["samplingPeriodSec"];
+				var lastSampleSec = data["lastSampleSec"];
+				var today = new Date();
+				today.setSeconds(today.getSeconds() - lastSampleSec);
+				for (let i = 0; i < yValues.length; i++) {
+					today.setSeconds(today.getSeconds() - samplingPeriodSec);
+					console.log(today)
+					xValues.push(today.toLocaleTimeString('en-GB'));
+				}
+				console.log(xValues);
+				console.log(yValues);
+
+				//   TODO Print data in chart
+				//   https://www.w3schools.com/js/tryit.asp?filename=tryai_chartjs_lines_multi
+			}
+		})
+	}
+
+	//example how to add value to simple html element with id="data"
+
+	//var paragraph = document.getElementById("data");
+	//paragraph.textContent += yValues;	
+	//$("#data").val(JSON.stringify(yValues));
+
+	$(document).ready(function(){
+	  $("button").click(function(){
+          getData("red", "Temperature", "temperaturearray")
+	  });
+	});
+
+	</script>
+</head>
+<body>
+	<button>Pull Data</button>
+	
+    <div class="content">
+	<p id="data"></p>
+		<canvas id="Temperature" style="width:100%;max-width:600px"></canvas>
+	</div>
+</body>
+</html>

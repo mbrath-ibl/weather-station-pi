@@ -1,6 +1,9 @@
 # Weather Station Prototype
 ------
 
+Board Wiring:
+![Wiring](images/Pico-Top-Breadboard.jpg)
+
 Board manager:
 ```
 # Add additional board managers via File>Preferences>Additional boards manager URLS
@@ -11,7 +14,7 @@ Praspberry Pi Pico/RP2040
 3.1.0 installed
 ```
 
-Additional libraries:
+Additional Libraries:
 ```
 DHT Sensor Lirary 
 v 1.4.4
@@ -30,7 +33,7 @@ https://k1r55.wiremockapi.cloud/humidityarray
 https://k1r55.wiremockapi.cloud/temperaturearray
 ```
 
-Escape html to c++
+Escape HTML To c++
 ```
 https://www.cescaper.com/
 ```
